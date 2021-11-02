@@ -1,0 +1,71 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<section class="page-header padding">
+<div class="container">
+<div class="page-content text-center">
+<h2>Project single</h2>
+<p>Construction & Building Html Template.</p>
+</div>
+</div>
+</section>
+<section class="project-single-section padding">
+<div class="container">
+<div class="row project-single-wrap align-items-center">
+    {% if projects %}
+    {% for project in projects %}
+<div class="col-md-6 sm-padding">
+<div id="project-single-carousel" class="project-single-carousel box-shadow owl-carousel">
+<div class="single-carousel">
+<img src="{{project.image1.url}}" alt="img">
+</div>
+<div class="single-carousel">
+<img src="{{project.image2.url}}" alt="img">
+</div>
+<div class="single-carousel">
+<img src="{{project.image3.url}}" alt="img">
+</div>
+</div>
+</div>
+<div class="col-md-6 sm-padding">
+<div class="project-single-content">
+<h2>{{project.title}}</h2>
+<p>{{project.description}}</p>
+<ul class="project-details">
+<li><span>Architects</span>: {{project.architects}}</li>
+<li><span>Location</span>: {{project.location}}</li>
+<li><span>Category</span>: {{project.category}}</li>
+<li><span>Area</span>: {{project.area}}</li>
+<li><span>Project Year</span>: {{project.project_year}}</li>
+<li><span>Manufactures</span>: {{project.manufactures}}</li>
+</ul>
+</div>
+</div>
+    {% endfor %}
+    {% else %}
+    <h2> project not available at the momomet </h2>
+    {% endif %}
+</div>
+ </div>
+</section>
+<div class="sponsor-section bg-grey">
+<div class="dots"></div>
+<div class="container">
+<div id="sponsor-carousel" class="sponsor-carousel owl-carousel">
+    {% if partners %}
+    {% for partner in partners %}
+    <div class="sponsor-item">
+        {% if partner.image %}
+        <img src="{{partner.image.url}}" alt="sponsor">
+        {% else %}
+        <h2>{{partner.name}}</h2>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <h2>no partners available</h2>
+    {% endif %}
+</div>
+</div>
+</div>
+{% endblock %}
