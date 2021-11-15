@@ -12,12 +12,12 @@
                 <div class="slider-content">
                     <div class="dl-caption medium">
                         <div class="inner-layer">
-                            <div data-animation="fade-in-right" data-delay="1s">{{item.service_name}}</div>
+                            <div data-animation="fade-in-right" data-delay="1s">{{item.service_name | truncatechars:20}}</div>
                         </div>
                     </div>
                     <div class="dl-caption big">
                         <div class="inner-layer">
-                            <div data-animation="fade-in-left" data-delay="2s">{{item.title}}</div>
+                            <div data-animation="fade-in-left" data-delay="2s">{{item.title | truncatechars:40}}</div>
                         </div>
                     </div>
                     <!-- <div class="dl-caption big">
@@ -138,7 +138,7 @@
                     {% else %}
                     <div class="number-line"></div>
                     {% endif %}
-                    <h3>{{planning.title | truncatechars:100 }}</h3>
+                    <h3>{{planning.title | truncatechars:20 }}</h3>
                     <p>{{planning.description | truncatechars:100 }}</p>
                 </div>
             </div>
@@ -175,8 +175,8 @@
                 <h2>no image</h2>
                 {% endif %}
                 <div class="projects-content">
-                    <a href="#" class="category">{{project.category}}</a>
-                    <h3><a href="#" class="tittle">{{project.title}}</a></h3>
+                    <a href="#" class="category">{{project.category | truncatechars:20}}</a>
+                    <h3><a href="#" class="tittle">{{project.title | truncatechars:20}}</a></h3>
                 </div>
             </div>
             {% endfor %}
@@ -232,8 +232,8 @@
                 <h2>no image </h2>
                 {% endif %}
                 <div class="testi-content">
-                    <p>"{{review.description}}"</p>
-                    <h3>{{review.name}}</h3>
+                    <p>"{{review.description | truncatechars:200}}"</p>
+                    <h3>{{review.name | truncatechars:20}}</h3>
                     <ul class="rattings">
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
@@ -241,7 +241,7 @@
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                     </ul>
-                    <span>{{review.role}}</span>
+                    <span>{{review.role | truncatechars:20}}</span>
                 </div>
                 <i class="fa fa-quote-right"></i>
             </div>
@@ -269,12 +269,12 @@
                         {% else %}
                         <h2>No image </h2>
                         {% endif %}
-                        <span class="category"><a href="#">{{property.title}}</a></span>
+                        <span class="category"><a href="">{{property.title | truncatechars:20}}</a></span>
                     </div>
                     <div class="blog-content">
-                        <h3><a href="#">{{property.sub_title}}</a></h3>
-                        <p>{{property.description}}</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3><a href="#">{{property.sub_title | truncatechars:20}}</a></h3>
+                        <p>{{property.description | truncatechars:200}}</p>
+                        <a href="" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>

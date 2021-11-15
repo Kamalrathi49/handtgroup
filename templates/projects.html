@@ -24,8 +24,8 @@
 <div class="overlay"></div>
 <a href="#" class="view-icon ajax-popup-link"> <i class="fas fa-expand"></i></a>
 <div class="projects-content">
-<a href="#" class="category">{{project.category}}</a>
-<h3><a href="{% url 'myapp:project-single' project.id %}" class="tittle">{{project.title}}</a></h3>
+<a href="#" class="category">{{project.category | truncatechars:20}}</a>
+<h3><a href="{% url 'myapp:project-single' project.id %}" class="tittle">{{project.title | truncatechars:20}}</a></h3>
 </div>
 </div>
 </div>

@@ -16,7 +16,6 @@
 <div class="about-content wow fadeInLeft">
 <h2>We are the expart on this field better solution since 1984.</h2>
 <p>We are committed to building a sustainable future by fostering a collaborative spirit that creates exceptional experiences, balanced relationships, and community built environment. Building isn’t just job. It's our passion. With every project we undertake, we set the bar high and provide the best industry.</p>
-<a href="#" class="default-btn">More About Us</a>
 </div>
 </div>
 <div class="col-lg-6 sm-padding">
@@ -59,8 +58,8 @@
     {% else %}
     <div class="number-line"></div>
     {% endif %}
-<h3>{{planning.title}}</h3>
-<p>{{planning.description}}</p>
+<h3>{{planning.title  | truncatechars:20}}</h3>
+<p>{{planning.description | truncatechars:200}}</p>
 </div>
 </div>
     {% endfor %}
@@ -80,7 +79,7 @@
 <span>Explore The Features</span>
 <h2>Offering the most complete integrated package!</h2>
 <p>We are committed to building a sustainable future by fostering a collaborative spirit that creates exceptional experiences, balanced relationships, and community built environment. Building isn’t just job. It's our passion. With every project we undertake, we set the bar high and provide the best industry.</p>
-<a href="#" class="default-btn">Get Free Quote</a>
+<a href="#" class="default-btn">Download Brochure</a>
 </div>
 </div>
 </div>
@@ -103,8 +102,8 @@
     <h2>no image </h2>
     {% endif %}
 <div class="testi-content">
-<p>"{{review.description}}"</p>
-<h3>{{review.name}}</h3>
+<p>"{{review.description  | truncatechars:200}}"</p>
+<h3>{{review.name  | truncatechars:20}}</h3>
 <ul class="rattings">
 <li><i class="fa fa-star"></i></li>
 <li><i class="fa fa-star"></i></li>

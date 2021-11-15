@@ -20,9 +20,8 @@
     <div class="service-icon">
     <i class="flaticon-3d-printer"></i>
     </div>
-    <h3>{{service.title}}</h3>
-    <p>{{service.description}}</p>
-    <a href="#" class="read-more">Read More</a>
+    <h3>{{service.title | truncatechars:20}}</h3>
+    <p>{{service.description | truncatechars:200}}</p>
     <div class="overlay-icon">
     <i class="flaticon-3d-printer"></i>
     </div>
@@ -53,8 +52,8 @@
     <h2>no image </h2>
     {% endif %}
 <div class="testi-content">
-<p>"{{review.description}}"</p>
-<h3>{{review.name}}</h3>
+<p>"{{review.description | truncatechars:200}}"</p>
+<h3>{{review.name | truncatechars:20}}</h3>
 <ul class="rattings">
 <li><i class="fa fa-star"></i></li>
 <li><i class="fa fa-star"></i></li>
